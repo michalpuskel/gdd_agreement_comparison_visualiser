@@ -1,6 +1,9 @@
 body {
-  font-size: 8px;
   font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-size: 20px;
 }
 
 table {
@@ -35,6 +38,7 @@ strong {
 }
 
 .HeadCol {
+  font-size: 8px;
   color: white;
 
   &--black {
@@ -68,4 +72,11 @@ strong {
     justify-content: space-between;
     font-size: 14px;
   }
+}
+
+.Footer {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
