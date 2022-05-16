@@ -5,6 +5,14 @@ body {
 table {
   margin: 30px;
   border-collapse: collapse;
+  position: relative;
+
+  caption {
+    width: 600px;
+    position: absolute;
+    top: -65px;
+    left: -250px;
+  }
 }
 
 td,
