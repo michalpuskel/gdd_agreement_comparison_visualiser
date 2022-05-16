@@ -1,0 +1,71 @@
+body {
+  font-size: 8px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+table {
+  margin: 30px;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  $size: 10px;
+  width: $size;
+  height: $size;
+  border: 1px solid black;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeadCol {
+  color: white;
+
+  &--GEO {
+    color: black;
+  }
+
+  &--empty {
+    border: none;
+  }
+}
+
+.Table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 70px;
+}
+
+.TableLegend {
+  display: flex;
+
+  &__Item {
+    width: 3px;
+    height: 10px;
+  }
+
+  &__Caption {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+}
