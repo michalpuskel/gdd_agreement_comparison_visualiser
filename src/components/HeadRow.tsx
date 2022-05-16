@@ -9,7 +9,7 @@ interface IProps {
 
 const HeadRow = ({ data, fileNames }: IProps) => (
   <tr>
-    <th className="HeadCol HeadCol--black">id</th>
+    <th className="HeadCol">id</th>
     {fileNames.map((fileName) => (
       <HeadCol
         key={fileName}
