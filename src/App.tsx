@@ -1,5 +1,6 @@
 import React from "react";
 import JSONInput from "./components/JSONInput";
+import ErrorBoundary from "./ErrorBoundary";
 import "./styles.scss";
 
 export interface IComparison {
@@ -20,7 +21,9 @@ const App = () => (
   <div className="Container">
     <h1>GDD agreement comparison visualiser</h1>
 
-    <JSONInput />
+    <ErrorBoundary>
+      <JSONInput />
+    </ErrorBoundary>
 
     <div className="Footer">
       <a
