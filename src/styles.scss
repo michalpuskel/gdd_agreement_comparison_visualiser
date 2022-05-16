@@ -135,6 +135,35 @@ button {
 
 .GroupLabelColorPicker {
   margin: 50px;
+
+  &__GroupNameInput {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      flex-grow: 1;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 16px;
+    }
+
+    button {
+      margin: 0;
+      padding: 0;
+      width: 35px;
+      height: 35px;
+      margin-left: 40px;
+      background-color: rgba(8, 218, 36, 0.766);
+      color: black;
+      border-width: 1px;
+      border-radius: 3px;
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+    }
+  }
 }
 
 .GroupLabelColorPickerRow {

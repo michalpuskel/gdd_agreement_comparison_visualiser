@@ -40,12 +40,8 @@ const GroupLabelColorPicker = ({ colors, onChange }: IProps) => {
           onChange={(e) => setNewlabel(e.target.value)}
         />
 
-        <button
-          className="ButtonAddLabel"
-          onClick={handleAdd}
-          disabled={!newLabel}
-        >
-          Add
+        <button onClick={handleAdd} disabled={!newLabel} title="add group">
+          ➕
         </button>
       </div>
     </div>
