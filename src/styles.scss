@@ -38,6 +38,7 @@ h2 {
 h3 {
   text-align: center;
   font-style: italic;
+  margin-bottom: 30px;
 }
 
 strong {
@@ -142,4 +143,45 @@ button {
 
 .GroupLabelColorPicker {
   margin: 50px;
+}
+
+.GroupLabelColorPickerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+
+  label,
+  input {
+    cursor: pointer;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-style: italic;
+  }
+
+  input {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+  }
+
+  button {
+    margin: 0;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    margin-left: 40px;
+  }
+
+  &__Name {
+    margin-right: 25px;
+  }
+
+  &__Controls {
+    display: flex;
+  }
 }
