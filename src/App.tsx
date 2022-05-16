@@ -8,7 +8,7 @@ interface IComparison {
 interface IData {
   Id: number;
   File_name: string;
-  Group: "ER" | "BA" | "GEO";
+  Group: string;
   Agreement_arithmetic: IComparison;
   Agreement_geometric: IComparison;
 }
