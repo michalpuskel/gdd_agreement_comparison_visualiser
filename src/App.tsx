@@ -1,6 +1,5 @@
 import React from "react";
-import Table from "./components/Table";
-import data from "./ER_BA_GEO.json";
+import JSONInput from "./components/JSONInput";
 import "./styles.scss";
 
 export interface IComparison {
@@ -18,14 +17,11 @@ export interface IAllData {
 }
 
 const App = () => (
-  <>
-    <div className="Container">
-      <h1>GDD agreement comparison visualiser</h1>
-      <Table data={data} variant="arithmetic" />
-      <Table data={data} variant="geometric" />
-      <Table data={data} variant="arithmetic" stretchValues />
-      <Table data={data} variant="geometric" stretchValues />
-    </div>
+  <div className="Container">
+    <h1>GDD agreement comparison visualiser</h1>
+
+    <JSONInput />
+
     <div className="Footer">
       <a
         href="https://github.com/michalpuskel/diplomka"
@@ -36,7 +32,7 @@ const App = () => (
       </a>
       <span>FMFI UK 2022</span>
     </div>
-  </>
+  </div>
 );
 
 export default App;

@@ -2,10 +2,6 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-h1 {
-  font-size: 20px;
-}
-
 table {
   margin: 30px;
   border-collapse: collapse;
@@ -19,6 +15,11 @@ th {
   border: 1px solid black;
 }
 
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
 h2 {
   font-size: 18px;
   font-weight: normal;
@@ -30,7 +31,12 @@ strong {
   font-weight: bold;
 }
 
-.Container {
+textarea {
+  width: 100%;
+  font-size: 20px;
+}
+
+.TableContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +61,7 @@ strong {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 70px;
+  margin: 80px;
 }
 
 .TableLegend {
@@ -75,8 +81,45 @@ strong {
 }
 
 .Footer {
+  width: 90%;
   font-size: 16px;
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Error {
+  margin-top: 30px;
+  border: 1px solid rgb(200, 0, 0);
+  border-radius: 4px;
+  padding: 10px;
+  max-width: 800px;
+  background-color: rgb(249, 225, 225);
+  display: flex;
+  flex-direction: column;
+
+  span {
+    &:first-child {
+      font-style: italic;
+    }
+
+    margin-top: 5px;
+  }
+}
+
+.JSONInput {
+  margin-top: 50px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
