@@ -52,10 +52,7 @@ const HeadCol = ({ Id, Group }: IHeadColProps) => {
   }
 
   return (
-    <th
-      className={`HeadCol HeadCol--${Group}`}
-      style={{ backgroundColor: groupColor }}
-    >
+    <th className={`HeadCol`} style={{ backgroundColor: groupColor }}>
       {Id}
     </th>
   );
@@ -81,7 +78,7 @@ interface IHeadRowProps {
 }
 const HeadRow = ({ data, fileNames }: IHeadRowProps) => (
   <tr>
-    <th className="HeadCol HeadCol--empty" />
+    <th className="HeadCol HeadCol--black">id</th>
     {fileNames.map((fileName) => (
       <HeadCol
         key={fileName}
