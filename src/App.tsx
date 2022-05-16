@@ -17,6 +17,13 @@ export interface IAllData {
   [fileName: string]: IData;
 }
 
+export interface IColorSetting {
+  [groupLabel: string]: {
+    background: string;
+    text: string;
+  };
+}
+
 const App = () => (
   <div className="Container">
     <h1>GDD agreement comparison visualiser</h1>

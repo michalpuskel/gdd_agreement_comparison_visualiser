@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IAllData } from "../App";
+import { IAllData, IColorSetting } from "../App";
 import HeadRow from "./HeadRow";
 import Row from "./Row";
 import TableLegend from "./TableLegend";
@@ -8,9 +8,15 @@ interface IProps {
   data: IAllData;
   variant: "arithmetic" | "geometric";
   stretchValues?: boolean;
+  headColors: IColorSetting;
 }
 
-const Table = ({ data, variant: iVariant, stretchValues }: IProps) => {
+const Table = ({
+  data,
+  variant: iVariant,
+  stretchValues,
+  headColors,
+}: IProps) => {
   const fileNames = Object.keys(data);
 
   const variant =
@@ -37,7 +43,7 @@ const Table = ({ data, variant: iVariant, stretchValues }: IProps) => {
           </h2>
         </caption>
         <thead>
-          <HeadRow data={data} fileNames={fileNames} />
+          <HeadRow data={data} fileNames={fileNames} headColors={headColors} />
         </thead>
         <tbody>
           {fileNames.map((fileName) => (
@@ -47,6 +53,7 @@ const Table = ({ data, variant: iVariant, stretchValues }: IProps) => {
               data={data[fileName][variant]}
               fileNames={fileNames}
               minValue={minValue}
+              headColors={headColors}
             />
           ))}
         </tbody>

@@ -1,4 +1,6 @@
 import * as React from "react";
+import { IColorSetting } from "../App";
+import GroupLabelColorPicker from "./GroupLabelColorPicker";
 import Table from "./Table";
 
 interface IProps {
@@ -6,8 +8,9 @@ interface IProps {
 }
 
 const TableWithJSONInput = ({ dataValue }: IProps) => {
-  let dataJSON = undefined;
+  const [colors, setColors] = React.useState<IColorSetting>({});
 
+  let dataJSON = undefined;
   try {
     dataJSON = JSON.parse(dataValue);
   } catch (error) {
@@ -19,12 +22,16 @@ const TableWithJSONInput = ({ dataValue }: IProps) => {
     );
   }
 
+  const tableProps = { data: dataJSON, headColors: colors };
+
   return (
     <div className="TableContainer">
-      <Table data={dataJSON} variant="arithmetic" />
-      <Table data={dataJSON} variant="geometric" />
-      <Table data={dataJSON} variant="arithmetic" stretchValues />
-      <Table data={dataJSON} variant="geometric" stretchValues />
+      <GroupLabelColorPicker />
+
+      <Table {...tableProps} variant="arithmetic" />
+      <Table {...tableProps} variant="geometric" />
+      <Table {...tableProps} variant="arithmetic" stretchValues />
+      <Table {...tableProps} variant="geometric" stretchValues />
     </div>
   );
 };

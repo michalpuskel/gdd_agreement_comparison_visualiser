@@ -1,24 +1,23 @@
 import * as React from "react";
-import { IData } from "../App";
+import { IColorSetting, IData } from "../App";
 
-interface IProps extends Pick<IData, "Id" | "Group"> {}
+interface IProps extends Pick<IData, "Id" | "Group"> {
+  headColors: IColorSetting;
+}
 
-const HeadCol = ({ Id, Group }: IProps) => {
-  let groupColor = "white";
-  switch (Group) {
-    case "ER":
-      groupColor = "#ff3399";
-      break;
-    case "BA":
-      groupColor = "#0066ff";
-      break;
-    case "GEO":
-      groupColor = "#ffcc00";
-      break;
+const HeadCol = ({ Id, Group, headColors }: IProps) => {
+  let groupBackgroundColor = "white";
+  let groupTextColor = "black";
+  if (Group !== "null") {
+    groupBackgroundColor = headColors[Group]?.background ?? "white";
+    groupTextColor = headColors[Group]?.text ?? "black";
   }
 
   return (
-    <th className={`HeadCol`} style={{ backgroundColor: groupColor }}>
+    <th
+      className={`HeadCol`}
+      style={{ backgroundColor: groupBackgroundColor, color: groupTextColor }}
+    >
       {Id}
     </th>
   );

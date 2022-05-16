@@ -51,6 +51,7 @@ button {
 
 .HeadCol {
   font-size: 8px;
+  background-color: white;
   color: black;
 
   &--empty {
@@ -124,4 +125,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.GroupLabelColorPicker {
+  margin: 50px;
 }
