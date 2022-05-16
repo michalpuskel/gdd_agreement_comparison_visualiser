@@ -26,7 +26,7 @@ const TableWithJSONInput = ({ dataValue }: IProps) => {
 
   return (
     <div className="TableContainer">
-      <GroupLabelColorPicker />
+      <GroupLabelColorPicker colors={colors} onChange={setColors} />
 
       <Table {...tableProps} variant="arithmetic" />
       <Table {...tableProps} variant="geometric" />
