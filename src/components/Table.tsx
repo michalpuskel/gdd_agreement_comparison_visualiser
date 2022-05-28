@@ -17,7 +17,9 @@ const Table = ({
   stretchValues,
   headColors,
 }: IProps) => {
-  const fileNames = Object.keys(data);
+  const fileNames = Object.values(data)
+    .sort((a, b) => (a.Id < b.Id ? -1 : a.Id > b.Id ? 1 : 0))
+    .map((d) => d.File_name);
 
   const variant =
     iVariant === "arithmetic" ? "Agreement_arithmetic" : "Agreement_geometric";
